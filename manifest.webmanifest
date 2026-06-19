@@ -1,0 +1,12 @@
+{
+  "name": "Kyydit – taksitilausten kalenteri",
+  "short_name": "Kyydit",
+  "description": "Yhteinen taksitilausten kalenteri",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#1d6b4b",
+  "lang": "fi",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
