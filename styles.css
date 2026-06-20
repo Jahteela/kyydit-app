@@ -22,3 +22,19 @@ body{background:linear-gradient(180deg,#eaf2ed 0,#f7f5ef 300px);background-attac
 .route span{font-weight:600;color:#4e5b52}.route b{margin:0 5px;color:var(--green)}
 .primary{box-shadow:0 7px 18px rgba(29,107,75,.2);transition:transform .15s ease,background .15s ease}.primary:hover{background:#15583d;transform:translateY(-1px)}
 @media(max-width:680px){.app>header{align-items:flex-start;padding:17px}.app>header .logo{width:43px;height:43px}.app>header .header-actions{width:100%;margin-top:12px;justify-content:flex-start}.summary{grid-template-columns:1fr 1fr;gap:9px}.summary-card{padding:12px}.summary-card:first-child{grid-column:1/-1}.summary-card strong{font-size:21px}.summary-icon{width:35px;height:35px}.calendar-panel{border-radius:17px}.form-panel,.list-panel{border-radius:17px}}
+
+/* Kangaslammin Auto -brändi */
+:root{--ink:#151515;--muted:#666;--paper:#f3f3f3;--line:#dedede;--green:#ef5b62;--pale:#fff0f1;--amber:#f4bd4b;--red:#d94149}
+body{font-family:"Avenir Next","Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#e8e8e8 0,#f5f5f5 320px)}
+.app>header{background:#050505;border-radius:18px;border-bottom:4px solid #ef5b62;box-shadow:0 18px 48px rgba(0,0,0,.22)}
+.brand-logo{object-fit:contain;border-radius:0!important;background:transparent!important;border:0!important}
+.app>header .logo{width:150px;height:62px}.app>header h1{font-size:22px}.app>header .subtitle{color:#cfcfcf;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:800}
+.badge.live{background:#ef5b62;color:#fff}.badge.demo{background:#f4bd4b;color:#151515}
+.summary-card{border-radius:13px;border-color:#d8d8d8}.summary-card strong{color:#151515}.summary-icon{background:#151515;color:#fff;border-radius:50%}
+.summary-card.waiting .summary-icon,.summary-card.confirmed .summary-icon{background:#151515;color:#fff}
+.panel{border-radius:16px;border-color:#d8d8d8}.day{border-radius:9px}.day.selected{outline-color:#ef5b62}.day.today .num{background:#ef5b62}.chip{background:#151515;color:#fff;border-radius:5px}
+.ride:before{background:#ef5b62}.ride-time{color:#d94149}.route b{color:#ef5b62}
+.primary{background:#f4bd4b;color:#151515;box-shadow:0 7px 18px rgba(244,189,75,.25)}.primary:hover{background:#e5aa31;color:#111}
+.count{background:#151515;color:#fff}.icon-btn{color:#d94149}.small{background:#ededed}.small.delete{background:#fff0f1;color:#c8333b}
+.auth-view{background:#050505}.auth-card{background:#111;border-color:#333;color:#fff}.auth-card p{color:#cfcfcf}.auth-card label{color:#eee}.auth-card input{background:#fff;color:#111}.auth-logo{width:190px;height:auto;margin-bottom:18px}.auth-card h1{text-transform:uppercase;letter-spacing:.03em}
+@media(max-width:680px){.app>header .logo{width:125px;height:52px}.app>header h1{font-size:19px}.app>header{border-radius:14px}.summary-card:first-child{grid-column:auto}.summary{grid-template-columns:repeat(3,1fr)}.summary-card{display:block;text-align:center}.summary-icon{margin:0 auto 8px}.summary-card small{font-size:10px}.summary-card strong{font-size:19px}}

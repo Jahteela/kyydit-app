@@ -1,12 +1,12 @@
 {
-  "name": "Kyydit – taksitilausten kalenteri",
-  "short_name": "Kyydit",
+  "name": "Kangaslammin Auto – Kyytikalenteri",
+  "short_name": "KA Kyydit",
   "description": "Yhteinen taksitilausten kalenteri",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f7f5ef",
-  "theme_color": "#1d6b4b",
+  "background_color": "#f3f3f3",
+  "theme_color": "#050505",
   "lang": "fi",
   "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }

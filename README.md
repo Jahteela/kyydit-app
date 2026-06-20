@@ -1,4 +1,4 @@
-# Kyydit
+# Kangaslammin Auto – Kyytikalenteri
 
 Androidiin asennettava taksitilausten yhteinen kalenterisovellus.
 
@@ -7,7 +7,7 @@ Androidiin asennettava taksitilausten yhteinen kalenterisovellus.
 - käyttäjätunnuksilla suojattu kalenteri
 - ylläpitäjän, työnjohdon ja kuljettajan käyttäjäroolit
 - kyytien lisääminen, muokkaaminen ja poistaminen
-- kuljettajan osoittaminen kyydille
+- Kangaslammin Auton ilmeeseen sovitettu näkymä
 - Supabase-tietokanta ja reaaliaikaiset päivitykset
 - CSV-varmuuskopiointi
 - PWA-tuki Android-asennusta varten

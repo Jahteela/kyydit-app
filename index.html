@@ -2,24 +2,24 @@
 <html lang="fi">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#1d6b4b"><meta name="robots" content="noindex,nofollow"><title>Kyydit</title>
+  <meta name="theme-color" content="#050505"><meta name="robots" content="noindex,nofollow"><title>Kangaslammin Auto – Kyytikalenteri</title>
   <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="authView" class="auth-view hidden">
     <section class="auth-card">
-      <img src="icon.svg" alt="" class="auth-logo"><h1>Kyydit</h1><p>Yhteinen taksitilausten kalenteri</p>
+      <img src="brand-logo.png" alt="Kangaslammin Auto" class="auth-logo brand-logo"><h1>Kyytikalenteri</h1><p>Kangaslammin Auto</p>
       <form id="authForm"><label>Sähköposti<input id="email" type="email" autocomplete="email" required></label><label>Salasana<input id="password" type="password" minlength="6" autocomplete="current-password" required></label><button class="primary" type="submit">Kirjaudu</button></form>
       <p>Ylläpitäjä luo käyttäjätunnukset.</p><div id="authMessage" class="message"></div>
     </section>
   </div>
   <main id="appView" class="app hidden">
-    <header><div class="brand"><img src="icon.svg" alt="" class="logo"><div><h1>Kyydit</h1><div class="subtitle">Ajot hallinnassa, päivä kerrallaan <span id="modeBadge" class="badge demo">ESITTELY</span></div></div></div><div class="header-actions"><button id="todayBtn" class="secondary">Tänään</button><button id="exportBtn" class="secondary">Vie CSV</button><button id="logoutBtn" class="secondary hidden">Kirjaudu ulos</button></div></header>
+    <header><div class="brand"><img src="brand-logo.png" alt="Kangaslammin Auto" class="logo brand-logo"><div><h1>Kyytikalenteri</h1><div class="subtitle">Kangaslammin Auto <span id="modeBadge" class="badge demo">ESITTELY</span></div></div></div><div class="header-actions"><button id="todayBtn" class="secondary">Tänään</button><button id="exportBtn" class="secondary">Vie CSV</button><button id="logoutBtn" class="secondary hidden">Kirjaudu ulos</button></div></header>
     <div id="notice" class="notice hidden"></div>
     <section class="summary" aria-label="Päivän yhteenveto">
-      <div class="summary-card"><span class="summary-icon">↗</span><div><strong id="todayCount">0</strong><small>Kyytiä tänään</small></div></div>
-      <div class="summary-card waiting"><span class="summary-icon">◷</span><div><strong id="pendingCount">0</strong><small>Odottaa vahvistusta</small></div></div>
-      <div class="summary-card confirmed"><span class="summary-icon">✓</span><div><strong id="confirmedCount">0</strong><small>Vahvistettu</small></div></div>
+      <div class="summary-card"><span class="summary-icon">T</span><div><strong id="todayCount">0</strong><small>Kyytiä tänään</small></div></div>
+      <div class="summary-card waiting"><span class="summary-icon">H</span><div><strong id="tomorrowCount">0</strong><small>Kyytiä huomenna</small></div></div>
+      <div class="summary-card confirmed"><span class="summary-icon">7</span><div><strong id="weekCount">0</strong><small>Seuraavat 7 päivää</small></div></div>
     </section>
     <div class="layout">
       <section class="panel calendar-panel"><div class="cal-head"><h2 id="monthTitle"></h2><div><button id="prev" class="icon-btn" aria-label="Edellinen kuukausi">‹</button><button id="next" class="icon-btn" aria-label="Seuraava kuukausi">›</button></div></div><div class="weekdays"><span>ma</span><span>ti</span><span>ke</span><span>to</span><span>pe</span><span>la</span><span>su</span></div><div id="calendar" class="calendar"></div></section>
@@ -28,7 +28,6 @@
           <label>Päivä<input id="date" type="date" required></label><label>Kellonaika<input id="time" type="time" required></label>
           <label class="full">Asiakas<input id="customer" required placeholder="Nimi"></label><label class="full">Puhelinnumero<input id="phone" type="tel" placeholder="040 123 4567"></label>
           <label class="full">Noutopaikka<input id="pickup" required placeholder="Osoite tai paikka"></label><label class="full">Määränpää<input id="destination" required placeholder="Osoite tai paikka"></label>
-          <label class="full">Tila<select id="status"><option value="pending">Odottaa</option><option value="confirmed">Vahvistettu</option><option value="completed">Valmis</option><option value="cancelled">Peruttu</option></select></label>
           <label class="full">Lisätiedot<textarea id="notes" placeholder="Esim. 2 matkustajaa, pyörätuoli…"></textarea></label>
         </div><div class="form-actions"><button class="primary" type="submit">Tallenna</button><button id="cancelEdit" class="secondary hidden" type="button">Peruuta</button></div></form></section>
         <section class="panel list-panel"><div class="list-head"><h3 id="selectedTitle">Päivän kyydit</h3><span id="count" class="count">0</span></div><div id="rides" class="rides"></div></section>
