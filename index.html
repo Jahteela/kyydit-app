@@ -14,8 +14,13 @@
     </section>
   </div>
   <main id="appView" class="app hidden">
-    <header><div class="brand"><img src="icon.svg" alt="" class="logo"><div><h1>Kyydit</h1><div class="subtitle">Taksitilaukset yhdessä kalenterissa <span id="modeBadge" class="badge demo">ESITTELY</span></div></div></div><div class="header-actions"><button id="todayBtn" class="secondary">Tänään</button><button id="exportBtn" class="secondary">Vie CSV</button><button id="logoutBtn" class="secondary hidden">Kirjaudu ulos</button></div></header>
+    <header><div class="brand"><img src="icon.svg" alt="" class="logo"><div><h1>Kyydit</h1><div class="subtitle">Ajot hallinnassa, päivä kerrallaan <span id="modeBadge" class="badge demo">ESITTELY</span></div></div></div><div class="header-actions"><button id="todayBtn" class="secondary">Tänään</button><button id="exportBtn" class="secondary">Vie CSV</button><button id="logoutBtn" class="secondary hidden">Kirjaudu ulos</button></div></header>
     <div id="notice" class="notice hidden"></div>
+    <section class="summary" aria-label="Päivän yhteenveto">
+      <div class="summary-card"><span class="summary-icon">↗</span><div><strong id="todayCount">0</strong><small>Kyytiä tänään</small></div></div>
+      <div class="summary-card waiting"><span class="summary-icon">◷</span><div><strong id="pendingCount">0</strong><small>Odottaa vahvistusta</small></div></div>
+      <div class="summary-card confirmed"><span class="summary-icon">✓</span><div><strong id="confirmedCount">0</strong><small>Vahvistettu</small></div></div>
+    </section>
     <div class="layout">
       <section class="panel calendar-panel"><div class="cal-head"><h2 id="monthTitle"></h2><div><button id="prev" class="icon-btn" aria-label="Edellinen kuukausi">‹</button><button id="next" class="icon-btn" aria-label="Seuraava kuukausi">›</button></div></div><div class="weekdays"><span>ma</span><span>ti</span><span>ke</span><span>to</span><span>pe</span><span>la</span><span>su</span></div><div id="calendar" class="calendar"></div></section>
       <aside class="side">
@@ -23,8 +28,8 @@
           <label>Päivä<input id="date" type="date" required></label><label>Kellonaika<input id="time" type="time" required></label>
           <label class="full">Asiakas<input id="customer" required placeholder="Nimi"></label><label class="full">Puhelinnumero<input id="phone" type="tel" placeholder="040 123 4567"></label>
           <label class="full">Noutopaikka<input id="pickup" required placeholder="Osoite tai paikka"></label><label class="full">Määränpää<input id="destination" required placeholder="Osoite tai paikka"></label>
-          <label>Tila<select id="status"><option value="pending">Odottaa</option><option value="confirmed">Vahvistettu</option><option value="completed">Valmis</option><option value="cancelled">Peruttu</option></select></label>
-          <label>Kuljettaja<select id="assigned"><option value="">Ei osoitettu</option></select></label><label class="full">Lisätiedot<textarea id="notes" placeholder="Esim. 2 matkustajaa, pyörätuoli…"></textarea></label>
+          <label class="full">Tila<select id="status"><option value="pending">Odottaa</option><option value="confirmed">Vahvistettu</option><option value="completed">Valmis</option><option value="cancelled">Peruttu</option></select></label>
+          <label class="full">Lisätiedot<textarea id="notes" placeholder="Esim. 2 matkustajaa, pyörätuoli…"></textarea></label>
         </div><div class="form-actions"><button class="primary" type="submit">Tallenna</button><button id="cancelEdit" class="secondary hidden" type="button">Peruuta</button></div></form></section>
         <section class="panel list-panel"><div class="list-head"><h3 id="selectedTitle">Päivän kyydit</h3><span id="count" class="count">0</span></div><div id="rides" class="rides"></div></section>
       </aside>
