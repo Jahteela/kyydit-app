@@ -25,6 +25,8 @@ create table if not exists public.rides (
   updated_at timestamptz not null default now()
 );
 
+-- Google Kalenteri -synkronoinnin tekniset kentät. Näitä ei näytetä käyttäjille.
+
 create or replace function public.handle_new_user() returns trigger language plpgsql security definer set search_path=public as $$
 begin insert into public.profiles(id,email,full_name) values(new.id,new.email,coalesce(new.raw_user_meta_data->>'full_name',split_part(new.email,'@',1))) on conflict do nothing; return new; end; $$;
 drop trigger if exists on_auth_user_created on auth.users;
@@ -41,6 +43,7 @@ alter table public.rides enable row level security;
 grant usage on schema public to authenticated;
 grant select, update on table public.profiles to authenticated;
 grant select, insert, update, delete on table public.rides to authenticated;
+grant select, insert, update, delete on table public.rides to service_role;
 
 drop policy if exists "profiles readable" on public.profiles;
 create policy "profiles readable" on public.profiles for select to authenticated using (true);
